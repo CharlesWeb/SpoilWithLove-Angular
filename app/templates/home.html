@@ -23,27 +23,115 @@
 		</section>
 
 
-<div class="container">
-	<div class="row">
-		<h2>Search Series</h2>
-		<div class="input-group">
-			<input type="text" class="form-control" ng-model="searchTerm" placeholder="Chercher un film..." ng-model-options="{ debounce: 1000}">
+	<div class="container">
+		<!-- Search -->
+		<div class="row">
+			<h2>Search Series</h2>
+			<div class="input-group">
+				<input type="text" class="form-control" ng-model="searchTerm" placeholder="Chercher un film..." ng-model-options="{ debounce: 1000}">
+			</div>
 		</div>
-	</div>
 
 
-	<div class="col-md-2" ng-repeat="searchedSerie in searchedSeries track by $index">
-		<h3 class="text-center">{{searchedSerie.original_title}}</h3>
-		<a ui-sref="serie({id : searchedSerie.id})"><img src="{{baseImageUrl}}{{searchedSerie.poster_path}}" style="max-width:100%" alt=""/></a>
-	</div>
+		<div class="col-md-2" ng-repeat="searchedSerie in searchedSeries track by $index">
+			<h3 class="text-center">{{searchedSerie.original_title}}</h3>
+			<a ui-sref="serie({id : searchedSerie.id})"><img src="{{baseImageUrl}}{{searchedSerie.poster_path}}" style="max-width:100%" alt=""/></a>
+		</div>
+	<!-- Fin Search -->
 
-
-  <div class="row">
-	  <h2>Popular Series</h2>
-	  <div class="col-md-2" ng-repeat="popularSerie in popularSeries track by $index">
-		  <h3 class="text-center">{{popularSerie.original_name}}</h3>
-		  <a ui-sref="serie({id : popularSerie.id})"><img src="{{baseImageUrl}}{{popularSerie.poster_path}}" style="max-width:100%" alt=""/></a>
+	<!-- Popular -->
+	  <div class="row">
+		  <h2>Popular Series</h2>
+		  <div class="col-md-2" ng-repeat="popularSerie in popularSeries track by $index">
+			  <h7 class="text-center">{{popularSerie.original_name}}</h7>
+			  <a ui-sref="serie({id : popularSerie.id})"><img src="{{baseImageUrl}}{{popularSerie.poster_path}}" style="max-width:100%" alt=""/></a>
+		  </div>
 	  </div>
-  </div>
+	<!-- Fin Popular -->
+	</div>
 
-</div>
+
+	<!-- About -->
+	<section id="about" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h3 class="section-title">Qu'est ce que Spoil With Love ?</h3>
+					<div class="section-title-border"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p class="lead">
+						<strong>Tes potes t'ont déjà spoilé ? Tu ressens l'envie de te venger ? Spoil With Love
+						est la pour toi l'ami.</strong>
+					</p>
+					<p>A l'heure actuelle, un énorme fléau ravage la surface du monde. Nous ne parlons pas des guerres, du réchauffement climatique ou de la
+						disparition des pingouins. Non. Nous parlons du <strong>spoil!</strong> Tu as surement déjà été victime de cette calamité. Alors
+						que tu débute une nouvelle série, un soi-disant ami va profiter de cela pour te <strong>spoil</strong> allégrement et surtout impunément.
+						Ce temps de peur est fini, maintenant, grâce à <strong>Spoil With Love</strong>, tu peux te venger ! Défends-toi jeune spoilé !
+					</p>
+					<div class="row">
+						<div class="col-sm-4 feature-box-container">
+							<div class="feature-box wow fadeInDown">
+								<div class="icon">
+									<i class="fa fa-cogs"></i>
+								</div>
+								<div class="description">
+									<h4>Choisi la série !</h4>
+									<p>Coche la série que tu souhaite spoil à ton prochain, parmis un choix d'une dizaine!
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 feature-box-container">
+							<div class="feature-box wow fadeInDown" data-wow-delay="0.2s">
+								<div class="icon">
+									<i class="fa fa-rocket"></i>
+								</div>
+								<div class="description">
+									<h4>Donne le mail de ton pote!</h4>
+									<p>Tu as juste à l'écrire dans le champ "Adresse Mail". Promis, c'est facile.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 feature-box-container">
+							<div class="feature-box wow fadeInDown" data-wow-delay="0.4s">
+								<div class="icon">
+									<span class="red"><i class="fa fa-heart"></i></a>
+								</div>
+								<div class="description">
+									<h4>Laisse nous faire!</h4>
+									<p>On s'occupe de tout pour le reste, et rassure toi : c'est parfaitement anonyme ;) !
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- Fin About -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<p class="text-center">
+					Spoil with <span class="red"><i class="fa fa-heart"></i></span> est un site réalisé dans
+					le cadre des Buzzies Awards par Charles, Jordan et Benjamin  !
+				</p>
+
+				<div class="text-center">
+					<div class="social">
+						<a href="https://www.facebook.com/Spoil-with-Love-971985956173635" target="_blank" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/Spoilwith_love" target="_blank" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Start of SimpleHitCounter Code -->
+		<!-- <div align="center"><a href="http://www.simplehitcounter.com" target="_blank"><img src="http://simplehitcounter.com/hit.php?uid=1975039&f=16777215&b=0" border="0" height="18" width="83" alt="web counter"></a><br><a href="http://www.simplehitcounter.com" target="_blank" style="text-decoration:none;"></a></div> -->
+		<!-- End of SimpleHitCounter Code -->
+		</footer>
