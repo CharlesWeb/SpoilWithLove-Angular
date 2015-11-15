@@ -1,24 +1,49 @@
-<div class="container">
-	<h1 class="text-center">Spoil With Love</h1>
+<!-- Main -->
+		<section class="main text-center" id="home">
+			<div class="voile"></div>
+			<div class="page">
+				<div class="wrapper">
+					<div class="container">
+						<h1 class="heading">Spoil With <span class="red"><i class="fa fa-heart"></i></span></h1>
 
-<div class="row">
-	<h2>Search Series</h2>
-	<div class="input-group">
-		<input type="text" class="form-control" ng-model="searchTerm" placeholder="Chercher un film..." ng-model-options="{ debounce: 1000}">
+						<p>Spoil tes potes sur leurs séries préférées !</p>
+
+						<div class="text-center">
+							<div class="social">
+								<a href="https://www.facebook.com/Spoil-with-Love-971985956173635" target="_blank" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+								<a href="https://twitter.com/Spoilwith_love" target="_blank" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="arrow-down">
+						<a class="scroll" href="index.html#about" id="scroll"><i class="fa fa-angle-double-down"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+<div class="container">
+	<div class="row">
+		<h2>Search Series</h2>
+		<div class="input-group">
+			<input type="text" class="form-control" ng-model="searchTerm" placeholder="Chercher un film..." ng-model-options="{ debounce: 1000}">
+		</div>
 	</div>
+
 
 	<div class="col-md-2" ng-repeat="searchedSerie in searchedSeries track by $index">
 		<h3 class="text-center">{{searchedSerie.original_title}}</h3>
 		<a ui-sref="serie({id : searchedSerie.id})"><img src="{{baseImageUrl}}{{searchedSerie.poster_path}}" style="max-width:100%" alt=""/></a>
 	</div>
-</div>
 
-<div class="row">
-	<h2>Popular Series</h2>
-	<div class="col-md-2" ng-repeat="popularSerie in popularSeries track by $index">
-		<h3 class="text-center">{{popularSerie.original_name}}</h3>
-		<a ui-sref="serie({id : popularSerie.id})"><img src="{{baseImageUrl}}{{popularSerie.poster_path}}" style="max-width:100%" alt=""/></a>
-	</div>
-</div>
+
+  <div class="row">
+	  <h2>Popular Series</h2>
+	  <div class="col-md-2" ng-repeat="popularSerie in popularSeries track by $index">
+		  <h3 class="text-center">{{popularSerie.original_name}}</h3>
+		  <a ui-sref="serie({id : popularSerie.id})"><img src="{{baseImageUrl}}{{popularSerie.poster_path}}" style="max-width:100%" alt=""/></a>
+	  </div>
+  </div>
 
 </div>
