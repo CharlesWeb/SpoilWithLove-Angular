@@ -71,7 +71,7 @@ angular.module('starter.services').service('TmdbService', [ '$q', '$http',
           }
         }).then(function(response) {
        // Success
-       var series = response.data;
+       var serie = response.data;
        q.resolve(serie);
 
         }, function(response) {
